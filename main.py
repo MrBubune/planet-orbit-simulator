@@ -2,7 +2,7 @@ import math
 import pygame
 
 pygame.init()
-WIDTH, HEIGHT = 800, 600
+WIDTH, HEIGHT = 1000, 800
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption('Planet Simulation')
 clock = pygame.time.Clock()
@@ -65,7 +65,7 @@ bodies = [
     Body(5.79e10, 0, 0, 47360, 3.301e23, 2, (169, 169, 169)),  # Mercury
     Body(1.082e11, 0, 0, 35020, 4.867e24, 3, (255, 165, 0)),  # Venus
     Body(1.496e11, 0, 0, 29780, 5.972e24, 4, (0, 100, 255)),  # Earth
-    Body(279e11, 0, 0, 24077, 6.39e23, 3, (255, 100, 0)),  # Mars
+    Body(2.79e11, 0, 0, 24077, 6.39e23, 3, (255, 100, 0)),  # Mars
     Body(7.786e11, 0, 0, 13070, 1.898e27, 6, (200, 150, 100)),  # Jupiter
     Body(1.432e12, 0, 0, 9680, 5.683e26, 5, (250, 200, 100)),  # Saturn
     Body(2.867e12, 0, 0, 6810, 8.681e25, 4, (100, 200, 255)),  # Uranus
@@ -94,6 +94,8 @@ while running:
         body.draw(screen)
     
     pygame.display.flip()
-    clock.tick(60)
+    clock.tick(60*10)
 
 pygame.quit()
+
+# add ability to add planets by clicking in space, button to speed up, planet going behind sun, add stars to BG, add moons
