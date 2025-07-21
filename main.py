@@ -94,7 +94,7 @@ while running:
         body.draw(screen)
     
     pygame.display.flip()
-    clock.tick(60*10)
+    clock.tick(60)
 
 pygame.quit()
 
